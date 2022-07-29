@@ -1,0 +1,17 @@
+name: on_issue
+
+on:
+  issues:
+    types:
+      - opened
+jobs:
+  hello_world:
+    name: "test1"
+    runs-on: ubuntu-latest
+    permissions:
+      issues: read
+    steps:
+      - name: step name
+        id: step_id
+        run: |
+          echo "Hello world!"
